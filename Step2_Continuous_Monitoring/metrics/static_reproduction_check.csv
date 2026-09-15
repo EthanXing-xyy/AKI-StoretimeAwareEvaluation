@@ -1,0 +1,16 @@
+artifact_id,model,prediction_horizon,n,max_abs_prob_diff,tolerance,auroc_saved,auroc_reproduced,labels_identical,passed
+full_logistic_regression_h0_seed42,logistic_regression,0,2168,0.0,1e-06,0.795128148475475,0.795128148475475,True,True
+full_xgboost_h0_seed42,xgboost,0,2168,0.0,1e-06,0.8592655135408118,0.8592655135408118,True,True
+full_lstm_attention_h0_seed42,lstm_attention,0,2168,1.4901161193847656e-07,1e-05,0.9652365696610062,0.9652365696610062,True,True
+full_masked_cnn_h0_seed42,masked_cnn,0,2168,0.0,1e-05,0.9740980683037688,0.9740980683037688,True,True
+full_ite_transformer_h0_seed42,ite_transformer,0,2168,0.0,1e-05,0.9677498263998486,0.9677498263998486,True,True
+full_logistic_regression_h48_seed42,logistic_regression,48,2168,0.0,1e-06,0.7320600025250932,0.7320600025250932,True,True
+full_xgboost_h48_seed42,xgboost,48,2168,0.0,1e-06,0.7578632977716054,0.7578632977716054,True,True
+full_lstm_attention_h48_seed42,lstm_attention,48,2168,4.76837158203125e-07,1e-05,0.9063348273467584,0.9063348273467584,True,True
+full_masked_cnn_h48_seed42,masked_cnn,48,2168,0.0,1e-05,0.8947983081876144,0.8947983081876144,True,True
+full_ite_transformer_h48_seed42,ite_transformer,48,2168,0.0,1e-05,0.8778091660879995,0.8778091660879995,True,True
+full_logistic_regression_h72_seed42,logistic_regression,72,2168,0.0,1e-06,0.696120825705448,0.696120825705448,True,True
+full_xgboost_h72_seed42,xgboost,72,2168,0.0,1e-06,0.74853228962818,0.74853228962818,True,True
+full_lstm_attention_h72_seed42,lstm_attention,72,2168,2.980232238769531e-07,1e-05,0.8202488794899313,0.8202488794899313,True,True
+full_masked_cnn_h72_seed42,masked_cnn,72,2168,0.0,1e-05,0.6555733539549271,0.6555733539549271,True,True
+full_ite_transformer_h72_seed42,ite_transformer,72,2168,0.0,1e-05,0.7747340761315574,0.7747340761315574,True,True

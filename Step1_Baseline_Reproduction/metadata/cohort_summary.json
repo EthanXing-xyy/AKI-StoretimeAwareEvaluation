@@ -1,0 +1,29 @@
+{
+  "n_subjects": 12627,
+  "n_admissions": 14023,
+  "n_stays": 14374,
+  "n_aki": 798,
+  "n_non_aki": 13576,
+  "prevalence": 0.05551690552386253,
+  "splits": {
+    "train": {
+      "subjects": 8838,
+      "stays": 10043,
+      "aki": 556
+    },
+    "val": {
+      "subjects": 1894,
+      "stays": 2163,
+      "aki": 118
+    },
+    "test": {
+      "subjects": 1895,
+      "stays": 2168,
+      "aki": 124
+    }
+  },
+  "exclusion_reasons": {
+    "aki_onset_before_96h": 45173,
+    "missing_required_vital": 15218
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "auroc": 0.696120825705448,
+  "auprc": 0.15771711832566193,
+  "accuracy": 0.8053505535055351,
+  "sensitivity": 0.45161290322580644,
+  "specificity": 0.8268101761252447,
+  "ppv": 0.13658536585365855,
+  "npv": 0.9613196814562003,
+  "f1": 0.20973782771535582,
+  "brier_score": 0.18860610338213346,
+  "threshold": 0.5638922252144365,
+  "confusion_matrix": [
+    [
+      1690,
+      354
+    ],
+    [
+      68,
+      56
+    ]
+  ],
+  "n_test": 2168,
+  "n_positive": 124,
+  "prevalence": 0.05719557195571956,
+  "model": "logistic_regression",
+  "prediction_window": 72,
+  "scope": "full",
+  "n_train": 10043,
+  "n_val": 2163,
+  "seed": 42
+}

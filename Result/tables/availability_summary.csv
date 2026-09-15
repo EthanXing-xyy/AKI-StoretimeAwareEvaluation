@@ -1,0 +1,8 @@
+﻿"measure","value","unit","source"
+"test_icu_lab_rows","190321","rows","lab_delay_by_feature.csv"
+"median_storetime_minus_charttime","52.0","minutes","lab_delay_by_feature.csv"
+"iqr_storetime_minus_charttime","26.0-73.0","minutes","lab_delay_by_feature.csv"
+"lab_rows_delayed_over_1h","38.72772841672753","percent","lab_delay_by_feature.csv"
+"pending_rows_at_primary_t0","2145.0","rows","pending_by_timepoint_feature_group.csv"
+"pending_share_at_primary_t0","1.4282289960449044","percent","pending_by_timepoint_feature_group.csv"
+"onset_creatinine_pending_at_t0","24/24","count","onset_creatinine_summary.csv"

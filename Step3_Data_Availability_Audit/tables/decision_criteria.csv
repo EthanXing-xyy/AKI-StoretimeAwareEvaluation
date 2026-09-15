@@ -1,0 +1,4 @@
+criterion,threshold,observed,met
+"(a) eligible AKI stays with a changed last lab value (creatinine or any lab), t=0 / −12 h",≥ 5%,t=0: 30.6%; −12 h: 12.1%,True
+"(b) absolute AKI − non-AKI difference in stay-level pending share, t=0 / −12 h",≥ 5 pp,t=0: +20.8 pp; −12 h: -4.4 pp,True
+(c) creatinine-onset AKI stays whose onset creatinine is not yet stored at t=0,≥ 5%,100.0% (24/24),True

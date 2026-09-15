@@ -1,0 +1,2 @@
+interim_rows,interim_unique_ids,extracted_rows,extracted_unique_ids,interim_ids_not_found,charttime_mismatch,itemid_mismatch,storetime_missing_raw,storetime_unparseable,csv_rows_scanned,elapsed_seconds
+21356181,21356181,21356181,21356181,0,0,0,0,0,158374764,242.2

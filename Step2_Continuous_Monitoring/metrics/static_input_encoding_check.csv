@@ -1,0 +1,4 @@
+prediction_horizon,n_stays,irregular_mismatches,cnn_mismatches,demo_mismatches,flat_mismatches
+0,2168,0,0,0,0
+48,2168,0,0,0,0
+72,2168,0,0,0,0

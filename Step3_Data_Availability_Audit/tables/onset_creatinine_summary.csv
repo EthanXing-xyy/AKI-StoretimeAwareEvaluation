@@ -1,0 +1,2 @@
+﻿"subset","n_aki","n_onset_creatinine_only","n_onset_urine_only","n_onset_creatinine_and_urine","n_onset_unresolved","n_creatinine_defines_onset","n_onset_creatinine_missing_storetime","n_onset_creatinine_pending_at_t0","pct_onset_creatinine_pending_at_t0","delay_median_min","delay_q1_min","delay_q3_min","delay_p90_min","delay_p95_min","pct_delay_gt_30min","pct_delay_gt_1h","pct_delay_gt_2h","n_matched_t0_creatinine_last_value_changed"
+"all_test_aki","124","24","100","0","0","24","0","24","100.0","63.0","54.75","76.25","98.8","102.55","100.0","66.66666666666666","0.0","35"

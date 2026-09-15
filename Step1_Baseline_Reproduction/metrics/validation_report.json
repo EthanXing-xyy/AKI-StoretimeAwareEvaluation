@@ -1,0 +1,192 @@
+{
+  "passed": true,
+  "checks_passed": 37,
+  "checks_total": 37,
+  "checks": [
+    {
+      "check": "h0_patient_split_leakage",
+      "passed": true,
+      "detail": "no subject occurs in multiple splits"
+    },
+    {
+      "check": "h0_same_test_stays",
+      "passed": true,
+      "detail": "n_test=2168"
+    },
+    {
+      "check": "logistic_regression_h0_artifacts",
+      "passed": true,
+      "detail": "complete"
+    },
+    {
+      "check": "logistic_regression_h0_prediction_integrity",
+      "passed": true,
+      "detail": "identity=True, labels=True, probabilities=True, metrics=True, confusion_matrix=True"
+    },
+    {
+      "check": "xgboost_h0_artifacts",
+      "passed": true,
+      "detail": "complete"
+    },
+    {
+      "check": "xgboost_h0_prediction_integrity",
+      "passed": true,
+      "detail": "identity=True, labels=True, probabilities=True, metrics=True, confusion_matrix=True"
+    },
+    {
+      "check": "lstm_attention_h0_artifacts",
+      "passed": true,
+      "detail": "complete"
+    },
+    {
+      "check": "lstm_attention_h0_prediction_integrity",
+      "passed": true,
+      "detail": "identity=True, labels=True, probabilities=True, metrics=True, confusion_matrix=True"
+    },
+    {
+      "check": "masked_cnn_h0_artifacts",
+      "passed": true,
+      "detail": "complete"
+    },
+    {
+      "check": "masked_cnn_h0_prediction_integrity",
+      "passed": true,
+      "detail": "identity=True, labels=True, probabilities=True, metrics=True, confusion_matrix=True"
+    },
+    {
+      "check": "ite_transformer_h0_artifacts",
+      "passed": true,
+      "detail": "complete"
+    },
+    {
+      "check": "ite_transformer_h0_prediction_integrity",
+      "passed": true,
+      "detail": "identity=True, labels=True, probabilities=True, metrics=True, confusion_matrix=True"
+    },
+    {
+      "check": "h48_patient_split_leakage",
+      "passed": true,
+      "detail": "no subject occurs in multiple splits"
+    },
+    {
+      "check": "h48_same_test_stays",
+      "passed": true,
+      "detail": "n_test=2168"
+    },
+    {
+      "check": "logistic_regression_h48_artifacts",
+      "passed": true,
+      "detail": "complete"
+    },
+    {
+      "check": "logistic_regression_h48_prediction_integrity",
+      "passed": true,
+      "detail": "identity=True, labels=True, probabilities=True, metrics=True, confusion_matrix=True"
+    },
+    {
+      "check": "xgboost_h48_artifacts",
+      "passed": true,
+      "detail": "complete"
+    },
+    {
+      "check": "xgboost_h48_prediction_integrity",
+      "passed": true,
+      "detail": "identity=True, labels=True, probabilities=True, metrics=True, confusion_matrix=True"
+    },
+    {
+      "check": "lstm_attention_h48_artifacts",
+      "passed": true,
+      "detail": "complete"
+    },
+    {
+      "check": "lstm_attention_h48_prediction_integrity",
+      "passed": true,
+      "detail": "identity=True, labels=True, probabilities=True, metrics=True, confusion_matrix=True"
+    },
+    {
+      "check": "masked_cnn_h48_artifacts",
+      "passed": true,
+      "detail": "complete"
+    },
+    {
+      "check": "masked_cnn_h48_prediction_integrity",
+      "passed": true,
+      "detail": "identity=True, labels=True, probabilities=True, metrics=True, confusion_matrix=True"
+    },
+    {
+      "check": "ite_transformer_h48_artifacts",
+      "passed": true,
+      "detail": "complete"
+    },
+    {
+      "check": "ite_transformer_h48_prediction_integrity",
+      "passed": true,
+      "detail": "identity=True, labels=True, probabilities=True, metrics=True, confusion_matrix=True"
+    },
+    {
+      "check": "h72_patient_split_leakage",
+      "passed": true,
+      "detail": "no subject occurs in multiple splits"
+    },
+    {
+      "check": "h72_same_test_stays",
+      "passed": true,
+      "detail": "n_test=2168"
+    },
+    {
+      "check": "logistic_regression_h72_artifacts",
+      "passed": true,
+      "detail": "complete"
+    },
+    {
+      "check": "logistic_regression_h72_prediction_integrity",
+      "passed": true,
+      "detail": "identity=True, labels=True, probabilities=True, metrics=True, confusion_matrix=True"
+    },
+    {
+      "check": "xgboost_h72_artifacts",
+      "passed": true,
+      "detail": "complete"
+    },
+    {
+      "check": "xgboost_h72_prediction_integrity",
+      "passed": true,
+      "detail": "identity=True, labels=True, probabilities=True, metrics=True, confusion_matrix=True"
+    },
+    {
+      "check": "lstm_attention_h72_artifacts",
+      "passed": true,
+      "detail": "complete"
+    },
+    {
+      "check": "lstm_attention_h72_prediction_integrity",
+      "passed": true,
+      "detail": "identity=True, labels=True, probabilities=True, metrics=True, confusion_matrix=True"
+    },
+    {
+      "check": "masked_cnn_h72_artifacts",
+      "passed": true,
+      "detail": "complete"
+    },
+    {
+      "check": "masked_cnn_h72_prediction_integrity",
+      "passed": true,
+      "detail": "identity=True, labels=True, probabilities=True, metrics=True, confusion_matrix=True"
+    },
+    {
+      "check": "ite_transformer_h72_artifacts",
+      "passed": true,
+      "detail": "complete"
+    },
+    {
+      "check": "ite_transformer_h72_prediction_integrity",
+      "passed": true,
+      "detail": "identity=True, labels=True, probabilities=True, metrics=True, confusion_matrix=True"
+    },
+    {
+      "check": "summary_15_experiments",
+      "passed": true,
+      "detail": "rows=15, unique_pairs=15"
+    }
+  ]
+}

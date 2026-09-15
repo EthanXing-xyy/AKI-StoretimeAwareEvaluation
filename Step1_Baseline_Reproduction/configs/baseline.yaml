@@ -1,0 +1,26 @@
+seed: 42
+cohort:
+  minimum_age: 19
+  minimum_control_hours: 24
+  minimum_case_hours_before_onset: 96
+  creatinine_baseline_hours: 48
+  require_all_vitals: true
+  vital_features: [sbp, dbp, pulse, resp, spo2, temp]
+split:
+  train: 0.70
+  validation: 0.15
+  test: 0.15
+processing:
+  csv_chunk_rows: 1000000
+  cnn_hours: 256
+  irregular_max_events: 2048
+  smoke_admissions: 2000
+training:
+  horizons: [0, 48, 72]
+  batch_size: 32
+  learning_rate: 0.0001
+  max_epochs: 50
+  early_stopping_patience: 10
+  smoke_max_epochs: 3
+  num_workers: 0
+

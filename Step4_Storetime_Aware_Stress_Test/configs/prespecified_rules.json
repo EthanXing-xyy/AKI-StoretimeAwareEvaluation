@@ -1,0 +1,26 @@
+{
+  "written": "2026-09-15, before any stress-test inference was run",
+  "design": {
+    "only_change": "laboratory rows enter a slice only if charttime <= cutoff AND storetime <= cutoff (storetime = proxy for result availability)",
+    "lab_input_order": ["join storetime per lab row", "remove rows with charttime <= cutoff < storetime", "aggregate avg(valuenum) by (stay_id, charttime, feature)", "encode with the frozen baseline encoder"],
+    "unchanged": ["15 frozen checkpoints", "test cohort d56d72c9...", "preprocessing (scaler/imputer/normalization)", "frozen validation thresholds", "reference times (matched primary, discharge sensitivity)", "monitoring timepoints [-72..0]", "eligibility rule", "vitals (chartevents) use charttime", "WBC itemid mapping"],
+    "variants": {
+      "charttime": "null control, must reproduce ContinuousMonitoring predictions for all 5 architectures at horizon 0 before any other run",
+      "storetime": "primary stress test",
+      "onset_creatinine_only": "mechanistic decomposition: only the onset-defining creatinine of creatinine-onset AKI stays uses storetime"
+    }
+  },
+  "null_control": {
+    "checkpoints": ["h0 logistic_regression", "h0 xgboost", "h0 lstm_attention", "h0 masked_cnn", "h0 ite_transformer"],
+    "tolerance_y_prob": {"ml": 1e-6, "deep": 1e-5},
+    "also_required": ["identical eligibility, cutoff_dt, n_events_used and alerts", "0 rows removed", "row table re-aggregates bit-identically to the original event extraction"]
+  },
+  "interpretation": {
+    "primary_endpoint": "paired delta AUROC (storetime - charttime) at t=0, matched reference, all eligible stays, per checkpoint",
+    "uncertainty": "2000 stay-level bootstrap resamples stratified by AKI/non-AKI, seed 42, same resample for both conditions; percentile 95% CI",
+    "material_auroc_change": "95% CI excludes 0 AND |delta AUROC| >= 0.02",
+    "faithfulness_conclusion_changed": "clinically_faithful flag flips for any checkpoint (per reference mode and cohort)",
+    "ranking_changed": "any rank change within a ranking scope of static_vs_continuous_ranking",
+    "reporting": "all values reported regardless of thresholds; interpreted as the share of 0 h performance attributable to the storetime proxy, not as prospective deployment performance"
+  }
+}

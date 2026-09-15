@@ -1,0 +1,36 @@
+phase: retrospective_continuous_monitoring
+seed: 42
+time_points_hours: [-72, -60, -48, -36, -24, -12, 0]
+reuse_subject_level_split: true
+held_out_split: test
+allow_split_generation: false
+allow_model_training: false
+allow_preprocessing_fit: false
+allow_test_set_tuning: false
+require_existing_checkpoints: true
+require_existing_preprocessing_artifacts: true
+prediction_horizons: [0, 48, 72]
+models: [logistic_regression, xgboost, lstm_attention, masked_cnn, ite_transformer]
+artifact_scope: full
+artifact_manifest: Step1_Baseline_Reproduction/metadata/artifact_manifest.csv
+expected_formal_artifacts: 15
+expected_test_cohort_sha256: d56d72c99d71e56e5144b30f7f0a4238f670dad4a24dd739d3ef3b13c7222723
+expected_test_stays: 2168
+expected_test_aki: 124
+threshold_source: baseline_config_validation_threshold
+reference_time:
+  modes: [matched, discharge]
+  primary: matched
+  matching_seed: 42
+  matching_min_obs_hours: 24
+  matching_population: master_include
+eligibility:
+  cutoff_must_be_within_icu_stay: true
+  min_timeseries_observations: 1
+dry_run:
+  model: lstm_attention
+  horizon: 0
+static_reproduction_tolerance:
+  ml: 1.0e-6
+  deep: 1.0e-5
+device: cuda

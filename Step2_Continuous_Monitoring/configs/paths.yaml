@@ -1,0 +1,15 @@
+# Values are resolved from the repository root, never from the current directory.
+project_root: Step2_Continuous_Monitoring
+baseline_root: Step1_Baseline_Reproduction
+baseline_data_root: work/Step1_Baseline_Reproduction/data
+baseline_cohort_root: work/Step1_Baseline_Reproduction/data/cohorts
+baseline_processed_data_root: work/Step1_Baseline_Reproduction/data/processed
+baseline_results_root: Step1_Baseline_Reproduction
+test_subjects: work/Step1_Baseline_Reproduction/data/cohorts/test_subjects.csv
+scripts_root: Step2_Continuous_Monitoring/scripts
+logs_root: work/Step2_Continuous_Monitoring/logs
+predictions_root: work/Step2_Continuous_Monitoring/predictions
+metrics_root: work/Step2_Continuous_Monitoring/metrics
+figures_root: work/Step2_Continuous_Monitoring/figures
+summary_root: work/Step2_Continuous_Monitoring/summary
+paper_repo_root: external/aki-timeseries-continuous-monitoring

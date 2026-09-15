@@ -1,0 +1,12 @@
+# Values are resolved from the repository root, never from the current directory.
+project_root: Step1_Baseline_Reproduction
+mimic_zip: data/raw/MIMIC_IV.zip
+raw_data_root: work/Step1_Baseline_Reproduction/data/raw
+interim_data_root: work/Step1_Baseline_Reproduction/data/interim
+processed_data_root: work/Step1_Baseline_Reproduction/data/processed
+cohort_root: work/Step1_Baseline_Reproduction/data/cohorts
+model_root: work/Step1_Baseline_Reproduction/models
+results_root: work/Step1_Baseline_Reproduction/results
+logs_root: work/Step1_Baseline_Reproduction/logs
+metadata_root: work/Step1_Baseline_Reproduction/metadata
+paper_repo_root: external/aki-timeseries-continuous-monitoring

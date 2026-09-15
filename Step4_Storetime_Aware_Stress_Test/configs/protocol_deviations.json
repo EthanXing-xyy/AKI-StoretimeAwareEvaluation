@@ -1,0 +1,20 @@
+{
+  "deviations": [
+    {
+      "date": "2026-09-15",
+      "prespecified": "storetime-aware eligible sets must equal ContinuousMonitoring; otherwise abort and report without silently changing pairing",
+      "observed": "storetime variant: 4 non-AKI stay-timepoints became ineligible (matched -36 h x1, -24 h x2; discharge -24 h x1) because every pre-cutoff observation was a not-yet-stored lab. Eligibility at -12 h and 0 h is unchanged. onset_creatinine_only: no eligibility change.",
+      "decision_by": "user",
+      "decision": "Pair on the intersection of stay-timepoints eligible under both conditions for paired metrics (bootstrap deltas, patient-level, subgroup); report pipeline metrics computed on each condition's own eligible set (faithfulness, ranking, alert burden) unchanged; list the affected stays and reasons separately in the report.",
+      "effect_on_primary_endpoint": "none (0 h eligibility identical)"
+    },
+    {
+      "date": "2026-09-15",
+      "prespecified": "identity check: stays whose inputs were untouched keep y_prob within the reproduction tolerance (deep 1e-5)",
+      "observed": "1 stay-timepoint exceeds tolerance: storetime, discharge -24 h, horizon-0 masked_cnn, |dy_prob| = 1.05e-3. Its 787 events and all 112 labs are unchanged (no pending lab, no sibling ICU stay). One earlier stay became ineligible in that slice, shifting it from the last batch (6 stays) into a full batch (32 stays).",
+      "diagnosis": "logs/diagnose_cnn_batch_shape.log: the identical input scored on GPU gives 0.2217351645 in a batch of 6 (= original ContinuousMonitoring value) and 0.2206828 in a batch of 32 (= stress-test value). With TF32 convolutions disabled or on CPU both batch sizes give 0.22103. The difference is a TF32 cuDNN kernel choice by batch shape, not a storetime effect; model parameters verified unchanged.",
+      "decision": "Keep the gate result as recorded (not relaxed); report the exception and its diagnosis. No rerun and no change to inference settings, so the stress test stays comparable with ContinuousMonitoring, which used the same GPU settings.",
+      "effect_on_primary_endpoint": "none (0 h eligibility and batch composition identical between conditions)"
+    }
+  ]
+}
