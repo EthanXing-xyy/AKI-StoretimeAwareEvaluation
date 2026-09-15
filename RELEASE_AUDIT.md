@@ -7,7 +7,7 @@
 - Audit date: 2026-09-15 (Asia/Shanghai)
 - The source directory was read and copied only. No source file was moved, deleted, overwritten, or edited.
 - No GitHub upload, Git push, remote creation, repository creation, or release publication was performed.
-- The clean release is not initialized as a nested copy of any source Git repository.
+- The clean release is initialized as a single local Git repository; no nested repository or remote is present.
 
 ## 2. Source-to-destination mapping
 
@@ -35,6 +35,7 @@ The following were intentionally not copied:
 - smoke-test checkpoints and dry-run outputs;
 - old comparison tables, old cohort artifacts, pre/post comparison outputs, and historical diagnostic scripts;
 - large interim/processed datasets, split files, raw patient-level cohorts, NPZ sequences, and patient-level predictions;
+- the regenerable Step 3 event-SQL consistency table, because its validation rows contained stay identifiers;
 - the exploratory `complete_trajectory` / complete-trajectory analysis, cohort composition discussion, changing risk set discussion, the 265-stay analysis, landmarking discussion, and their dedicated scripts/tables/figures;
 - `physionet.org.zip`, because executable dependency scanning showed that the corrected scientific pipeline does not read the notes archive;
 - `MIMIC_IV.zip`, because course data must not be distributed or committed;
@@ -162,7 +163,7 @@ Results:
 | References PDF byte comparison | PASS; 2/2 identical |
 | Step 2/3/4 script import and CLI path checks | PASS |
 | Five-model read-only 0 h forward-pass null control | PASS; 5/5, no artifact changes |
-| Internal relative Markdown links | PASS; 11/11 |
+| Internal relative Markdown links | PASS; 12/12 |
 | Result tables against retained validated aggregate sources | PASS |
 | Result inventory | PASS; 5 figures, 3 tables |
 | Raw/patient-level/sensitive-file audit | PASS |
@@ -190,12 +191,12 @@ The primary storetime table contains all 15 model/horizon comparisons. Fourteen 
 ## 11. Release size and upload planning
 
 - Total clean-release files: 354.
-- Total clean-release bytes: 174,403,709.
-- Total clean-release size: 166.324 MiB.
+- Total clean-release bytes: 174,399,614.
+- Total clean-release size: 166.320 MiB.
 - Files over 100 MB: 0.
-- Git LFS status: path-specific rules are prepared for all 15 formal checkpoint binaries; install Git LFS before checkout and future publication.
+- Git LFS status: installed locally; path-specific attribute resolution and staged-pointer checks pass for all 15 formal checkpoint binaries.
 - License status: project-authored code is covered by the root MIT License. The papers and upstream snapshot retain their original licenses and are not relicensed by the root license.
 
 ## 12. Final publication status
 
-No GitHub upload or push was performed. No GitHub remote was created. No GitHub repository or release was created. The directory is a local clean release awaiting explicit user approval for any future publication step.
+The local repository is on branch `main` with a clean working tree and no remote. No GitHub upload, push, LFS push, remote creation, repository creation, or release was performed. The release awaits explicit user approval for any network publication step.
