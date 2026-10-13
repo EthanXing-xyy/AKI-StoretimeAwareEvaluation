@@ -1,3 +1,5 @@
+**English** | [中文](README_zh.md)
+
 # AKI Prediction: Storetime-aware Continuous Monitoring Study
 
 > **Dataset setup:** This repository intentionally does not include the course-provided MIMIC-IV archive. Copy `MIMIC_IV.zip` to `data/raw/MIMIC_IV.zip` before reproducing the workflow. See [data/README.md](data/README.md).
